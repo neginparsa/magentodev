@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Excellence_Test>
+            <active>true</active>
+            <codePool>local</codePool>         
+        </Excellence_Test>
+    </modules>
+</config>
+
