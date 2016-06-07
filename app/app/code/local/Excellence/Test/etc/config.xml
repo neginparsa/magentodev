@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Excellence_Test>
+            <version>1.0.0</version>
+        </Excellence_Test>
+    </modules>
+    <global>
+        <catalog>
+            <product>
+                <type>
+                    <excellence translate="label" module="excellence_test">
+                        <label>Custom Product</label>
+                       <model>excellence_test/basket_product</model>
+                        <price_model>catalog/product_type_grouped_price</price_model>
+                        <composite>1</composite>
+                        <allow_product_types>
+                            <simple/>
+                            <grouped/>
+                        </allow_product_types>
+                        <index_priority>50</index_priority>
+                        <price_indexer>catalog/product_indexer_price_grouped</price_indexer>
+                    </excellence>
+                </type>
+            </product>
+        </catalog>
+        
+        <resources>
+            <excellence_test_setup>
+                <setup>
+                    <module>Excellence_Test</module>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+            </excellence_test_setup>
+        </resources>
+        <blocks>
+            <excellence_test>
+                <class>Excellence_Test_Block</class>
+            </excellence_test>
+        </blocks>
+        <helpers>
+            <excellence_test>
+                <class>Excellence_Test_Helper</class>
+            </excellence_test>
+        </helpers>
+        <models>
+            <excellence_test>
+                <class>Excellence_Test_Model</class>
+                <resourceModel>excellence_test_resource</resourceModel>
+            </excellence_test>
+            <excellence_test_resource>
+                <class>Excellence_Test_Model_Resource</class>
+            </excellence_test_resource>
+        </models>
+
+    </global>
+        
+     <adminhtml>
+        <layout>
+            <updates>
+                <excellence_test>
+                    <file>excellence/catalog.xml</file>
+                </excellence_test>
+            </updates>
+        </layout>
+     </adminhtml>
+    
+</config>
