@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layout>
-<adminhtml_catalog_product_grouped>
+<adminhtml_catalog_product_excellence>
     <reference name="product_tabs">
         <action method="addTab">
             <name>super</name>
             <block>adminhtml/catalog_product_edit_tab_super_group</block>
         </action>
     </reference>
-</adminhtml_catalog_product_grouped>
+</adminhtml_catalog_product_excellence>
+    <PRODUCT_TYPE_excellence>
+        <reference name="product.composite.fieldset">
+            <block type="adminhtml/catalog_product_composite_fieldset_grouped" name="product.composite.fieldset.grouped" before="product.composite.fieldset.options" template="catalog/product/composite/fieldset/grouped.phtml"/>
+            <remove name="product.composite.fieldset.qty"/>
+        </reference>
+    </PRODUCT_TYPE_excellence>
 </layout>
